@@ -7,6 +7,8 @@
   --green-hover: #0A8A45;
   --gray-hover: #585A5B;
   --white: #FFFFFF;
+  --error: #E56774;
+  --focus: #BFDEFF;
 }
 
 body{
@@ -14,7 +16,7 @@ body{
 }
 
 
-.btn {
+.button {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -34,25 +36,50 @@ body{
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-default {
+/* ... default button ... */
+
+.button-default {
   color: #fff;
   background-color: var(--green);
   border-color: var(--green);
 }
-.btn-default:hover {
+.button-default:hover {
   color: #fff;
   background-color: var(--green-hover);
   border-color: var(--green-hover);
 }
 
+/* ... /default button ... */
 
-.btn-outline-default {
+/* ... outline button ... */
+
+.button-outline {
   color: var(--green);
   border-color: var(--green);
 }
 
-.btn-outline-default:hover {
+.button-outline:hover {
   color: #fff;
   background-color: var(--green);
   border-color: var(--green);
 }
+
+/* ... /outline button ... */
+
+/* ... large button ... */
+
+.button-large {
+  color: #fff;
+  background-color: var(--green);
+  border-color: var(--green);
+  padding: 20px 24px;
+}
+
+.button-large:hover {
+  color: #fff;
+  background-color: var(--green-hover);
+  border-color: var(--green-hover);
+  padding: 20px 24px;
+}
+
+/* ... /large button ... */
