@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/ui-elements.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ui-spacing.css">
   <title>OFD UI</title>
 </head>
 <body>
@@ -15,21 +16,234 @@
     <div class="row">
       <div class="col">
         <h3>Default button</h3>
-        <a href="" class="button button-default">Default</a>
-        <p>&lt;a href="#" class="button button-default"&gt;Button&lt;/a&gt;</p>        
-      </div>
-      <div class="col">
-        <h3>Stroke button</h3>
-        <a href="" class="button button-outline">Outline</a>
-        <p>&lt;a href="#" class="button button-outline"&gt;Button&lt;/a&gt;</p>        
-      </div>
+        <a href="" class="button button-default">Link</a>
+        <p>
+          &lt;a <span class="green-l">href=</span><span class="red-l">"#"</span> 
+          <span class="green-l">class=</span>
+          <span class="red-l">"button button-default"</span>&gt;Link
+          &lt;/a&gt;
+        </p>
+
+        <button type="button" class="button button-default">Button</button>
+        <p>
+          &lt; button 
+          <span class="green-l">type=</span><span class="red-l">"button"</span>
+          <span class="green-l">class=</span><span class="red-l">"button button-default"</span>
+          &gtButton&lt;/button&gt
+        </p>        
+      </div>      
 
       <div class="col">
         <h3>Large button</h3>
-        <a href="" class="button button-large">Large</a>
-        <p>&lt;a href="#" class="button button-large"&gt;Button&lt;/a&gt;</p>        
+        <a href="" class="button button-large">Link</a>
+        <p>
+          &lt;a 
+          <span class="green-l">href=</span><span class="red-l">"#"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-large"</span>
+          &gt;Link&lt;/a&gt;
+        </p>
+        
+        <button type="button" class="button button-large">Button</button>
+        <p>
+          &lt;button 
+          <span class="green-l">type=</span><span class="red-l">"button"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-large"</span>
+          &gtButton&lt;/button&gt
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>Gray button</h3>
+        <a href="" class="button button-gray">Link</a>
+        <p>
+          &lt;a 
+          <span class="green-l">href=</span><span class="red-l">"#"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-gray"</span>
+          &gt;Link&lt;/a&gt;
+        </p>
+        
+        <button type="button" class="button button-gray">Button</button>
+        <p>
+          &lt;button 
+          <span class="green-l">type=</span><span class="red-l">"button"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-gray"</span>
+          &gtButton&lt;/button&gt
+        </p>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col">
+        <h3>Stroke button</h3>
+        <a href="" class="button button-outline">Link</a>
+        <p>
+          &lt;a 
+          <span class="green-l">href=</span><span class="red-l">"#"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-outline"</span>
+          &gt;Link&lt;/a&gt;
+        </p>
+        
+        <button type="button" class="button button-outline">Button</button>
+        <p>
+          &lt;button 
+          <span class="green-l">type=</span><span class="red-l">"button"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-outline"</span>
+          &gtButton&lt;/button&gt
+        </p>    
+      </div>
+
+      <div class="col">
+        <h3>Stroke large button</h3>
+        <a href="" class="button button-outline-lg">Link</a>
+        <p>
+          &lt;a 
+          <span class="green-l">href=</span><span class="red-l">"#"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-outline-lg"</span>
+          &gt;Link&lt;/a&gt;
+        </p>
+        
+        <button type="button" class="button button-outline-lg">Button</button>
+        <p>
+          &lt;button 
+          <span class="green-l">type=</span><span class="red-l">"button"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-outline-lg"</span>
+          &gtButton&lt;/button&gt
+        </p>    
+      </div>
+
+      <div class="col">
+        <h3>Stroke gray button</h3>
+        <a href="" class="button button-outline-gr">Link</a>
+        <p>
+          &lt;a 
+          <span class="green-l">href=</span><span class="red-l">"#"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-outline-gr"</span>
+          &gt;Link&lt;/a&gt;
+        </p>
+        
+        <button type="button" class="button button-outline-gr">Button</button>
+        <p>
+          &lt;button 
+          <span class="green-l">type=</span><span class="red-l">"button"</span> 
+          <span class="green-l">class=</span><span class="red-l">"button button-outline-gr"</span>
+          &gtButton&lt;/button&gt
+        </p>    
+      </div>
+    </div>
+    <hr>
+
+
+    <h1>Inputs</h1>
+    <div class="row">
+      <div class="col">
+        <h3>Default input</h3>
+        <div class="input-block">
+          <label for="" class="input-label">Label</label>          
+          <input type="text" class="form-input"> 
+          <span class="input-message">Message</span>
+
+          <p>
+            &lt;div <span class="green-l">class=</span><span class="red-l">"input-block"</span>&gt;<br>
+              &lt;label <span class="green-l">for=</span><span class="red-l">"name"</span> <span class="green-l">class=</span><span class="red-l">"input-label"</span>&gt;Label&lt;/label&gt;<br>          
+              &lt;input <span class="green-l">type=</span><span class="red-l">"text"</span> <span class="green-l">class=</span><span class="red-l">"form-input"</span>&gt;<br>                    
+              &lt;span <span class="green-l">class=</span><span class="red-l">"input-message"</span>&gtMessage&lt;/span&gt<br>
+            &lt;/div&gt;  
+          </p>
+        
+        </div>
+      </div>
+      <div class="col">
+        <h3>Left icon input</h3>
+        <div class="input-block left-icon">
+          <label for="" class="input-label">Label</label>
+          <input type="text" class="form-input">
+          <span class="input-message">Message</span>
+
+          <p>
+            &lt;div <span class="green-l">class=</span><span class="red-l">"input-block left-icon"</span>&gt;<br>
+              &lt;label <span class="green-l">for=</span><span class="red-l">"name"</span> <span class="green-l">class=</span><span class="red-l">"input-label"</span>&gt;Label&lt;/label&gt;<br>          
+              &lt;input <span class="green-l">type=</span><span class="red-l">"text"</span> <span class="green-l">class=</span><span class="red-l">"form-input"</span>&gt;<br>                     
+              &lt;span <span class="green-l">class=</span><span class="red-l">"input-message"</span>&gtMessage&lt;/span&gt<br>
+              &lt;/div&gt;  
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h3>Two side icons input</h3>
+        <div class="input-block two-icons">
+          <label for="" class="input-label">Label</label>          
+          <input type="text" class="form-input"> 
+          <span class="input-message">Message</span>
+
+          <p>
+            &lt;div <span class="green-l">class=</span><span class="red-l">"input-block two-icons"</span>&gt;<br>
+              &lt;label <span class="green-l">for=</span><span class="red-l">"name"</span> <span class="green-l">class=</span><span class="red-l">"input-label"</span>&gt;Label&lt;/label&gt;<br>          
+              &lt;input <span class="green-l">type=</span><span class="red-l">"text"</span> <span class="green-l">class=</span><span class="red-l">"form-input"</span>&gt;<br>                    
+              &lt;span <span class="green-l">class=</span><span class="red-l">"input-message"</span>&gtMessage&lt;/span&gt<br>
+              &lt;/div&gt;  
+          </p>
+        
+        </div>
+      </div>
+      <div class="col">
+        <h3>Right icon input</h3>
+        <div class="input-block right-icon">
+          <label for="" class="input-label">Label</label>
+          <input type="text" class="form-input">
+          <span class="input-message">Message</span>
+          
+          <p>
+            &lt;div <span class="green-l">class=</span><span class="red-l">"input-block right-icon"</span>&gt;<br>
+              &lt;label <span class="green-l">for=</span><span class="red-l">"name"</span> <span class="green-l">class=</span><span class="red-l">"input-label"</span>&gt;Label&lt;/label&gt;<br>          
+              &lt;input <span class="green-l">type=</span><span class="red-l">"text"</span> <span class="green-l">class=</span><span class="red-l">"form-input"</span>&gt;<br>                     
+              &lt;span <span class="green-l">class=</span><span class="red-l">"input-message"</span>&gtMessage&lt;/span&gt<br>
+              &lt;/div&gt;  
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <h3>Error input</h3>
+        <div class="input-block input-error">
+          <label for="" class="input-label">Label</label>          
+          <input type="text" class="form-input"> 
+          <span class="input-message">Message</span>
+
+          <p>
+            &lt;div <span class="green-l">class=</span><span class="red-l">"input-block input-error"</span>&gt;<br>
+              &lt;label <span class="green-l">for=</span><span class="red-l">"name"</span> <span class="green-l">class=</span><span class="red-l">"input-label"</span>&gt;Label&lt;/label&gt;<br>          
+              &lt;input <span class="green-l">type=</span><span class="red-l">"text"</span> <span class="green-l">class=</span><span class="red-l">"form-input"</span>&gt;<br>                    
+              &lt;span <span class="green-l">class=</span><span class="red-l">"input-message"</span>&gtMessage&lt;/span&gt<br>
+              &lt;/div&gt;  
+          </p>
+        
+        </div>
+      </div>
+      <div class="col">
+        <h3>Readonly input</h3>
+        <div class="input-block input-readonly">
+          <label for="" class="input-label">Label</label>
+          <input type="text" class="form-input" value="Readonly text" readonly>
+          <span class="input-message">Message</span>
+          
+          <p>
+            &lt;div <span class="green-l">class=</span><span class="red-l">"input-block input-readonly"</span>&gt;<br>
+              &lt;label <span class="green-l">for=</span><span class="red-l">"name"</span> <span class="green-l">class=</span><span class="red-l">"input-label"</span>&gt;Label&lt;/label&gt;<br>          
+              &lt;input <span class="green-l">type=</span><span class="red-l">"text"</span> <span class="green-l">class=</span><span class="red-l">"form-input"</span> value="Readonly text" readonly&gt;<br>                     
+              &lt;span <span class="green-l">class=</span><span class="red-l">"input-message"</span>&gtMessage&lt;/span&gt<br>
+              &lt;/div&gt;  
+          </p>
+        </div>
       </div>
     </div>
   </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
