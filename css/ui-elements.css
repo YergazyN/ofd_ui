@@ -309,6 +309,25 @@ body{
 
 /* ... /readonly input ... */
 
+/* ... search input ... */
+.input-search{
+
+}
+
+.input-search:after{
+  content: "";
+  position: absolute;
+  display: block;
+  right: 12px;
+  top: 19px;
+  width: 14px;
+  height: 14px;
+  background: url(../icons/search.svg);
+}
+
+
+/* ... search input ... */
+
 /* ... /INPUTS ... */
 
 
