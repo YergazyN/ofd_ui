@@ -1,6 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500;1,700&display=swap');
 
+/* ... import css files ... */
+@import "display.css";
+@import "ui-spacing.css";
+@import "style.css";
+/* ... /import css files ... */
+
 :root{
   --green: #27B066;
   --gray: #6C757D;
@@ -10,6 +16,9 @@
   --white: #FFFFFF;
   --error: #E56774;
   --focus: #BFDEFF;
+  --blue: #003CFF;
+  --gray-border: #DEE2E6;
+  --gray-border-hv: #8FA3BD;
 }
 
 body{
@@ -300,4 +309,321 @@ body{
 /* ... /readonly input ... */
 
 /* ... /INPUTS ... */
+
+
+/* ... TEXTAREAS ... */
+  .ta-block{
+
+  }
+
+  .ta-block > textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 118px;
+    padding: 16px 24px;
+    border: 1px solid var(--green);    
+    border-radius: 18px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: normal;
+  }
+
+  .ta-block > textarea:focus {      
+    box-shadow: 0px 0px 0px 3px rgba(0, 123, 255, 0.25);
+  }
+
+  .ta-block > span.ta-message{
+    font-size: 12px;
+  }
+
+
+  /* ... textarea readonly ... */
+
+  .ta-readonly > textarea {
+    background: var(--light-gray);
+    pointer-events: none;
+  }
+
+/* ... /TEXTAREAS ... */
+
+
+/* ... SELECTS ... */
+
+/** Custom Select **/
+
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  width: 100%;
+}
+  .custom-select-wrapper select {
+    display: none;
+  }
+  .custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+    .custom-select-trigger {
+      position: relative;
+      display: block;
+      /* width: 100%; */
+      padding: 0 84px 0 22px;      
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 60px;
+      background: #fff;
+      border: 1px solid var(--green);
+      border-radius: 18px;
+      cursor: pointer;
+    }
+      .custom-select-trigger:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 10px; height: 10px;
+        top: 50%; right: 25px;
+        margin-top: -3px;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        transform: rotate(45deg) translateY(-50%);
+        transition: all .4s ease-in-out;
+        transform-origin: 50% 0;
+      }
+      .custom-select.opened .custom-select-trigger:after {
+        margin-top: 3px;
+        transform: rotate(-135deg) translateY(-50%);
+      }
+  .custom-options {
+    position: absolute;
+    display: block;
+    top: 100%; left: 0; right: 0;
+    width: 100%;
+    margin: 2px 0;
+    border: 1px solid #b5b5b5;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 1px rgba(0,0,0,.07);
+    background: #fff;
+    transition: all .4s ease-in-out;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+  }
+  .custom-select.opened .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+    /* .custom-options:before {
+      position: absolute;
+      display: block;
+      content: '';
+      bottom: 100%; right: 25px;
+      width: 7px; height: 7px;
+      margin-bottom: -4px;
+      border-top: 1px solid #b5b5b5;
+      border-left: 1px solid #b5b5b5;
+      background: #fff;
+      transform: rotate(45deg);
+      transition: all .4s ease-in-out;
+    } */
+    .option-hover:before {
+      background: #f9f9f9;
+    }
+    .custom-option {
+      position: relative;
+      display: block;
+      padding: 0 22px;      
+      font-weight: 700;
+      color: #A5A3A9;
+      line-height: 28px;
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+    }
+    .custom-option:first-of-type {
+      border-radius: 18px 18px 0 0;
+    }
+    .custom-option:last-of-type {
+      border-bottom: 0;
+      border-radius: 0 0 18px 18px;
+    }
+    .custom-option:hover,
+    .custom-option.selection {
+      background: #f9f9f9;
+    }
+
+    .select-block > .select-message{
+      font-size: 12px;
+    }
+    
+    .select-block > .select-message-error{
+      font-size: 12px;
+      color: var(--error);
+    }
+
+
+    /* ... error select ... */
+
+    .error-select{
+      
+    }
+
+    .error-select > .custom-select-trigger{
+      border: 1px solid var(--error);    
+    }
+
+    /* ... /error select ... */
+
+/* ... /SELECTS ... */
+
+
+/* ... CHECKBOXES ...*/
+
+.checkbox-container {  
+  height: 26px;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid var(--gray-border);
+  border-radius: 9px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  border: 2px solid var(--gray-border-hv);
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* ... checkbox disabled ...*/
+
+.checkbox-disabled{
+  pointer-events: none;
+}
+
+.checkbox-disabled > .checkmark {  
+  background-color: var(--gray-border);
+  border: 2px solid var(--gray-border);  
+}
+
+
+.checkbox-disabled-checked{
+  pointer-events: none;
+}
+
+.checkbox-disabled-checked > input:checked ~ .checkmark {
+  background-color: var(--gray-border);
+  border: 2px solid var(--gray-border);
+}
+/* ... /CHECKBOXES ...*/
+
+/* ... MODALS ... */
+
+.mdl-block{
+  min-width: 300px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* ... modal small ...*/
+.mdl-small{
+  width: 300px;
+}
+/* ... /modal small ...*/
+
+/* ... modal medium ...*/
+.mdl-medium{
+  width: 500px;
+}
+/* ... /modal medium ...*/
+
+/* ... modal large ...*/
+.mdl-large{
+  width: 800px;
+}
+/* ... /modal large ...*/
+
+.mdl-header > .mdl-title{
+  margin-block-start: 0;
+  font-size: 24px;
+}
+
+.mdl-content{
+
+}
+
+.mdl-footer{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.mdl-footer .button:nth-child(2) {
+  margin-left: 8px;
+}
+
+/* ... /MODALS ... */
 
