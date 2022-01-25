@@ -309,6 +309,25 @@ body{
 
 /* ... /readonly input ... */
 
+/* ... search input ... */
+.input-search{
+
+}
+
+.input-search:after{
+  content: "";
+  position: absolute;
+  display: block;
+  right: 12px;
+  top: 19px;
+  width: 14px;
+  height: 14px;
+  background: url(../icons/search.svg);
+}
+
+
+/* ... search input ... */
+
 /* ... /INPUTS ... */
 
 
@@ -577,6 +596,96 @@ body{
   border: 2px solid var(--gray-border);
 }
 /* ... /CHECKBOXES ...*/
+
+/* ... RADIOBUTTONS ... */
+.radiobuttons {
+  height: 26px;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radiobuttons input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid var(--gray-border);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radiobuttons:hover input ~ .checkmark-radio {
+  border: 2px solid var(--gray-border-hv);
+}
+
+/* When the radio button is checked, add a blue background */
+.radiobuttons input:checked ~ .checkmark-radio {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiobuttons input:checked ~ .checkmark-radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiobuttons .checkmark-radio:after {
+  top: 6px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+}
+
+
+/* radiobuttons disabled ... */
+.disabled-radio{
+  pointer-events: none;
+}
+
+.disabled-radio > .checkmark-radio {  
+  background-color: var(--gray-border);
+  border: 2px solid var(--gray-border);  
+}
+
+
+.disabled-radio-checked{
+  pointer-events: none;
+}
+
+.disabled-radio-checked > input:checked ~ .checkmark-radio {
+  background-color: var(--gray-border);
+  border: 2px solid var(--gray-border);
+}
+
+/* ... RADIOBUTTONS ... */
 
 /* ... MODALS ... */
 
