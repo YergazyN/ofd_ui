@@ -97,3 +97,17 @@ $(".custom-select").each(function () {
 
 
 // select
+
+// password visibility toggle
+
+$('.eye-icon').click(function() {
+  if($('.pass-input').val() != '' && $('.pass-input').attr('type') == "password") {
+    $('.pass-input').attr('type', 'text');
+    $('.eye-icon').addClass('eye-icon-v');
+  } else {
+    $('.pass-input').attr('type', 'password');
+    $('.eye-icon').removeClass('eye-icon-v');
+  }
+})
+
+// /password visibility toggle

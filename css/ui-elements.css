@@ -1,13 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,400;1,500;1,700&display=swap');
 
-/* ... import css files ... */
-@import "display.css";
-@import "ui-spacing.css";
-@import "style.css";
-@import "table.css";
-/* ... /import css files ... */
-
 :root{
   --green: #27B066;
   --gray: #6C757D;
@@ -20,11 +13,58 @@
   --blue: #003CFF;
   --gray-border: #DEE2E6;
   --gray-border-hv: #8FA3BD;
+
+  /* badges colors*/
+
+  --register: #FFDE54;
+  --active: #1BD2A4;
+  --unpaid: #E56774;
+  --removed: #E8E8EA;
+
+  /* /badges colors*/
 }
 
 body{
+  margin: 0;
+  padding: 0;
   font-family: 'Rubik', sans-serif;
 }
+
+
+/* ........... COMMON STYLES .......... */
+
+/* ... documentation styles ... */
+.green-l{
+	color: #27B066;
+}
+
+.red-l{
+	color: #E56774;
+}
+
+header{
+  border-bottom: 1px solid var(--green);
+}
+/* ... /documentation styles ... */
+
+/* ... borders ... */
+
+.border-25{
+  border: 1px solid var(--green);
+  border-radius: 25px;
+}
+
+.border-10{
+  border: 1px solid var(--green);
+  border-radius: 10px;
+}
+
+/* ... /borders ... */
+
+/* ........... /COMMON STYLES .......... */
+
+
+
 
 /* ... BUTTONS ... */
 
@@ -189,6 +229,7 @@ body{
 .input-block > span.input-message{
   font-size: 12px;
 }
+
 /* ... left icon input block ... */
 
 .left-icon > label{
@@ -310,8 +351,8 @@ body{
 /* ... /readonly input ... */
 
 /* ... search input ... */
-.input-search{
-
+.input-search > input{
+  padding-right: 30px;
 }
 
 .input-search:after{
@@ -319,14 +360,110 @@ body{
   position: absolute;
   display: block;
   right: 12px;
-  top: 19px;
+  top: 22px;
   width: 14px;
   height: 14px;
   background: url(../icons/search.svg);
 }
 
 
-/* ... search input ... */
+/* ... /search input ... */
+
+/* ... password input ... */
+
+.password-input > label{
+  left: 40px;
+}
+
+.password-input > input{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.password-input:before{
+  content: "";
+  position: absolute;
+  display: block;
+  left: 12px;
+  top: 19px;
+  width: 16px;
+  height: 16px;
+  background: url(../icons/lock-circle.svg);
+}
+
+.password-input > .eye-icon{  
+  position: absolute;
+  display: block;
+  right: 12px;
+  top: 19px;
+  width: 16px;
+  height: 16px;
+  background: url(../icons/eye-closed.svg);
+  cursor: pointer;
+}
+
+.password-input > .eye-icon-v{  
+  position: absolute;
+  display: block;
+  right: 12px;
+  top: 19px;
+  width: 16px;
+  height: 16px;
+  background: url(../icons/eye.svg);
+  cursor: pointer;
+}
+/* ... /password input ... */
+
+/* ... phone input ... */
+
+.phone-input{
+
+}
+
+.phone-input > label{
+  left: 40px;
+}
+
+.phone-input > input{
+  padding-left: 40px;
+}
+
+.phone-input:before{
+  content: "";
+  position: absolute;
+  display: block;
+  left: 12px;
+  top: 19px;
+  width: 16px;
+  height: 16px;
+  background: url(../icons/phone.svg);
+}
+
+/* ... /phone input ... */
+
+/* ... mail input ... */
+
+.mail-input > label{
+  left: 40px;
+}
+
+.mail-input > input{
+  padding-left: 40px;
+}
+
+.mail-input:before{
+  content: "";
+  position: absolute;
+  display: block;
+  left: 12px;
+  top: 22px;
+  width: 16px;
+  height: 16px;
+  background: url(../icons/mail.svg);
+  background-repeat: no-repeat;
+}
+
+/* ... /mail input ... */
 
 /* ... /INPUTS ... */
 
@@ -737,3 +874,350 @@ body{
 
 /* ... /MODALS ... */
 
+
+
+/* .......... DISPLAY STYLES .......... */
+
+.display-flex {
+  display: flex !important;
+}
+
+/* ... jc - justify-content ... */
+
+.jc-start {
+  justify-content: flex-start !important;
+}
+
+.jc-end {
+  justify-content: flex-end !important;
+}
+
+.jc-center {
+  justify-content: center !important;
+}
+
+.jc-between {
+  justify-content: space-between !important;
+}
+
+.jc-around {
+  justify-content: space-around !important;
+}
+
+.jc-evenly {
+  justify-content: space-evenly !important;
+}
+
+
+
+/* ... ai - align-items ... */
+
+.ai-start {
+  align-items: flex-start !important;
+}
+
+.ai-end {
+  align-items: flex-end !important;
+}
+
+.ai-center {
+  align-items: center !important;
+}
+
+.ai-baseline {
+  align-items: baseline !important;
+}
+
+.ai-stretch {
+  align-items: stretch !important;
+}
+
+
+
+/* ... ac - align-content ... */
+
+.ac-start {
+  align-content: flex-start !important;
+}
+
+.ac-end {
+  align-content: flex-end !important;
+}
+
+.ac-center {
+  align-content: center !important;
+}
+
+.ac-between {
+  align-content: space-between !important;
+}
+
+.ac-around {
+  align-content: space-around !important;
+}
+
+.ac-stretch {
+  align-content: stretch !important;
+}
+
+
+
+/* ... as - align-self ... */
+
+.as-auto {
+  align-self: auto !important;
+}
+
+.as-start {
+  align-self: flex-start !important;
+}
+
+.as-end {
+  align-self: flex-end !important;
+}
+
+.as-center {
+  align-self: center !important;
+}
+
+.as-baseline {
+  align-self: baseline !important;
+}
+
+.as-stretch {
+  align-self: stretch !important;
+}
+
+.direction-col{
+  flex-direction: column;
+}
+
+/* .......... /DISPLAY STYLES .......... */
+
+
+/* .......... SPACING STYLES .......... */
+
+/* margin */
+
+/*... margin ...*/
+.mrg-1{
+  margin: 10px;
+}
+
+.mrg-2{
+  margin: 20px;
+}
+
+/*... margin-top ...*/
+
+.mrg-t-1{
+  margin-top: 10px;
+}
+
+.mrg-t-2{
+  margin-top: 20px;
+}
+
+/*... margin-bottom ...*/
+
+.mrg-b-1{
+  margin-bottom: 10px;
+}
+
+.mrg-b-2{
+  margin-bottom: 20px;
+}
+
+/*... margin-right ...*/
+
+.mrg-r-1{
+  margin-right: 10px;
+}
+
+.mrg-r-2{
+  margin-right: 20px;
+}
+
+/*... margin-left ...*/
+
+.mrg-l-1{
+  margin-left: 10px;
+}
+
+.mrg-l-2{
+  margin-left: 20px;
+}
+
+
+
+/* padding */
+
+.pd-1{
+  padding: 10px;
+}
+
+.pd-2{
+  padding: 20px;
+}
+
+/* ... padding-top ... */
+
+.pd-t-1{
+  padding-top: 10px;
+}
+
+.pd-t-2{
+  padding-top: 20px;
+}
+
+
+/* ... padding-bottom ... */
+
+.pd-b-1{
+  padding-bottom: 10px;
+}
+
+.pd-b-2{
+  padding-bottom: 20px;
+}
+
+
+/* ... padding-right ... */
+
+.pd-r-1{
+  padding-right: 10px;
+}
+
+.pd-r-2{
+  padding-right: 20px;
+}
+
+
+/* ...padding-left ... */
+
+.pd-l-1{
+  padding-left: 10px;
+}
+
+.pd-l-2{
+  padding-left: 20px;
+}
+
+
+/* .......... /SPACING STYLES .......... */
+
+
+/* .......... TABLE AND BADGES STYLES .......... */
+
+.status-badge{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  height: 24px;
+  padding: 4px 8px;
+  border-radius: 10px;
+
+  font-size: 12px;
+  margin: 5px;
+}
+
+.register-badge{
+  background: var(--register);
+}
+
+.active-badge{
+  background: var(--active);
+}
+
+.inactive-badge{
+  background: var(--unpaid);
+}
+
+.removed-badge{
+  background: var(--removed);
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: black;
+
+  font-size: 14px;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+  padding: 8px;
+}
+
+thead {
+  height: 40px;
+  background: #F9F9F9;
+  border-radius: 16px;
+}
+
+tr {
+  height: 24px;
+  padding-left: 17px;
+  padding-right: 24px;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+  font-weight: normal;
+}
+
+th:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 16px; 
+  border-bottom-left-radius: 16px;
+}
+
+th:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 16px; 
+  border-top-right-radius: 16px; 
+}
+
+td:first-child {
+  border-left-style: solid;
+  border-top-left-radius: 9px; 
+  border-bottom-left-radius: 9px;
+}
+td:last-child {
+  border-right-style: solid;
+  border-bottom-right-radius: 9px; 
+  border-top-right-radius: 9px; 
+}
+
+tbody > tr:hover{
+  background: #FEFEFE;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+  transition-duration: .3s;
+}
+
+/* .......... /TABLE AND BADGES STYLES .......... */
